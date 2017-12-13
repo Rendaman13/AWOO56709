@@ -24,13 +24,14 @@ rept $150 - $104
 db $00 ; RGBFIX likes header to be zero.
 endr
 SECTION "VblankHandler",ROM0 ; Handle VBLANK
-push af
-push bc
-push de
-push hl ; Preserve everything. Don't want any unexpected register changes
-call mapupdate ; Update dat shit
-pop hl
-pop de
-pop bc
-pop af
-reti ; Return w/ints
+vblank:
+  push af
+  push bc
+  push de
+  push hl ; Preserve everything. Don't want any unexpected register changes
+  call mapupdate ; Update dat shit
+  pop hl
+  pop de
+  pop bc
+  pop af
+  reti ; Return w/ints
