@@ -97,7 +97,7 @@ tilesetload: ; Lol I almost forgot this one
   or c
   jr nz,.loop
   ret
-joypadpoll: MAI FAVORITE!!!
+joypadpoll: ;  MAI FAVORITE!!!
   xor a ; a = 0
   ld [_justreleased],a ; I only want justreleased to display for a frame or 2
   ld a,%11011111 ; Set all of A's bits except 5, we're polling for button inputs
