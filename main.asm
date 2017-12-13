@@ -23,7 +23,7 @@ _up EQU 1 << 6
 _down EQU 1 << 7 
 _srcombo EQU _select | _b | _start
 SECTION "Init",ROM0[$150] ; Here we go
-Init:
+start:
 .wait
   ld a,[rSTAT] ; Gets current LCD statistics
   and %11 ; I only care about the mode
