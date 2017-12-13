@@ -53,7 +53,7 @@ gametick: ; TIL RGBDS hates whitespace.
   call srsdetect ; Detects if SR inputs are being held down
   call cursorupdate ; Updates cursor accordingly
   jr gametick ; LOOOOOOOOP
- oamwipe:
+oamwipe:
   ld hl,_oam ; Load OAM location into HL
   ld c,_oamlength ; Used as an 8-bit counter
  .loop
