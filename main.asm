@@ -24,6 +24,7 @@ _down EQU 1 << 7
 _srcombo EQU _select | _b | _start
 SECTION "Init",ROM0[$150] ; Here we go
 start:
+  ld sp,$FFFE ; Reset stack pointer
 .wait
   ld a,[rLY] ; Find y position of LCDC
   cp 144 ; Check if Vblank
