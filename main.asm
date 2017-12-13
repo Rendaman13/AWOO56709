@@ -56,7 +56,7 @@ gametick: ; TIL RGBDS hates whitespace.
 oamwipe:
   ld hl,_oam ; Load OAM location into HL
   ld c,_oamlength ; Used as an 8-bit counter
- .loop
+.loop
   xor a ; a = 0
   ldi [hl],a ; Load a into HL, increments HL
   dec c ; Decrement counter
