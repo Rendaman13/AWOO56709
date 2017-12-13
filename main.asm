@@ -21,7 +21,7 @@ _right EQU 1 << 4
 _left EQU 1 << 5
 _up EQU 1 << 6
 _down EQU 1 << 7 
-_srcombo EQU _select or _b or _start
+_srcombo EQU _select | _b | _start
 SECTION "Init",ROM0[$150] ; Here we go
 Init:
 .wait
