@@ -7,11 +7,11 @@ _oamlength EQU $A0
 _ram EQU $C000
 _ramlength EQU $2000
 _vram EQU $8000
-_xlocation EQUN _ram
+_xlocation EQU _ram
 _ylocation EQU _ram + 1
 _srframecounter EQU _ram + 2
 _joypad EQU _ram + 3
-_justreleased _ram + 4
+_justreleased EQU _ram + 4
 _tilemap EQU _ram + 5 ; This is just where the tilemap starts
 _b EQU 1
 _a EQU 1 << 1
