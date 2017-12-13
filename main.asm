@@ -46,7 +46,7 @@ Init:
   ld a,%10010011 ; Sets certain bits for LCDC
   ld [rLCDC],a ; Turns screen back on
   ei ; Enables Vblank int
- gametick:
+gametick: ; TIL RGBDS hates whitespace.
   halt ; Helps wth battery consumption
   nop ; Prevents a certain glith with halt
   call joypadpoll ; Polls joyinput
