@@ -25,10 +25,9 @@ _srcombo EQU _select | _b | _start
 SECTION "Init",ROM0[$150] ; Here we go
 start:
 .wait
-  ld a,[rSTAT] ; Gets current LCD statistics
-  and %11 ; I only care about the mode
-  cp 1 ; Mode 1?
-  jr nz,.wait ; No? Then keep waiting
+  ld a,[rLY] ; Find y position of LCDC
+  cp 144 ; Check if Vblank
+  jr nz,.wait ; Wait if not Vblank
   xor a ; a = 0
   ld [rLCDC],a ; Shuts off screen for init
   call oamwipe ; Wipes oam
