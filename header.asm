@@ -17,7 +17,7 @@ SECTION "Restart8",ROM0[$38]
 rst $38 ; lol
 SECTION "VblankJump",ROM0[$40] ; Used for Vblank int
 jp vblank ; Jump to Vblank handler
-SECTION "GameBoot",HOME[$100] ; Game jumps here on boot
+SECTION "GameBoot",ROM0[$100] ; Game jumps here on boot
 di ; ewwwwwwww interupts before init
 jp start ; Jump to init
 rept $150 - $104
